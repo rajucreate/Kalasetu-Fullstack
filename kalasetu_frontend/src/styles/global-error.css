@@ -1,0 +1,21 @@
+.global-error-banner {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fdeaea;
+  color: var(--danger);
+  border-bottom: 1px solid #f5c2c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.global-error-close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

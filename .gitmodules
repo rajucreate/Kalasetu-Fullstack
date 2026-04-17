@@ -1,0 +1,3 @@
+[submodule "kalasetu_backend"]
+	path = kalasetu_backend
+	url = https://github.com/rajucreate/Kalasetu

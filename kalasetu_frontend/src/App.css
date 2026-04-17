@@ -1,0 +1,23 @@
+@import './styles/globals.css';
+@import './styles/header.css';
+@import './styles/footer.css';
+@import './styles/home.css';
+@import './styles/auth.css';
+@import './styles/marketplace.css';
+@import './styles/product-detail.css';
+@import './styles/artisan-profile.css';
+@import './styles/consultant-dashboard.css';
+@import './styles/global-error.css';
+@import './styles/toast.css';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  background-color: #fff;
+}

@@ -1,0 +1,229 @@
+/* Consultant Dashboard */
+
+.consultant-dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dashboard-header h1 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.error-banner {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: var(--danger);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.verification-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.verification-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.product-image-small {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--lighter);
+}
+
+.product-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-small {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--light), var(--lighter));
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.product-details h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.product-region {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-artisan {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.verification-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--lighter);
+  border-radius: 8px;
+}
+
+.verification-form .form-group {
+  margin-bottom: 0;
+}
+
+.verification-form label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.verification-form input,
+.verification-form textarea {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.verification-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.verification-actions .button {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.verification-actions .button.verify {
+  background-color: var(--success);
+  color: white;
+}
+
+.verification-actions .button.verify:hover:not(:disabled) {
+  background-color: #229954;
+  transform: translateY(-1px);
+}
+
+.verification-actions .button.reject {
+  background-color: var(--danger);
+  color: white;
+}
+
+.verification-actions .button.reject:hover:not(:disabled) {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+.verification-actions .button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+/* Responsive */
+
+@media (max-width: 968px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .product-image-small {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .verification-form {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .consultant-dashboard-container {
+    padding: 1rem;
+  }
+
+  .verification-card {
+    padding: 1rem;
+  }
+
+  .verification-actions {
+    flex-direction: column;
+  }
+
+  .product-details h3 {
+    font-size: 1.2rem;
+  }
+}
