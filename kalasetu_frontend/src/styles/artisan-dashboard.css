@@ -169,8 +169,8 @@
 .ad-content {
   opacity: 1;
   transform: none;
-  border: 3px solid red !important;
-  min-height: 200px !important;
+  animation: none;
+  display: block;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -182,6 +182,40 @@
   border-radius: 22px;
   padding: 2rem;
   box-shadow: 0 8px 32px rgba(12, 15, 26, 0.07);
+  color: #1C1917;
+  min-height: 240px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.artisan-dashboard .ad-panel h1,
+.artisan-dashboard .ad-panel h2,
+.artisan-dashboard .ad-panel h3,
+.artisan-dashboard .ad-panel p,
+.artisan-dashboard .ad-panel label {
+  color: inherit;
+}
+
+.artisan-dashboard .ad-panel h2,
+.artisan-dashboard .ad-panel h3,
+.artisan-dashboard .ad-panel p {
+  margin-bottom: 0;
+}
+
+.artisan-dashboard .ad-product-form label.ad-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 0;
+}
+
+.artisan-dashboard .ad-product-form input,
+.artisan-dashboard .ad-product-form textarea {
+  width: 100%;
+  background: #FDFAF5;
+  color: #1C1917;
+  border: 1.5px solid #E7E0D5;
+  border-radius: 12px;
 }
 
 .ad-panel-head {
