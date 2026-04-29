@@ -439,6 +439,7 @@
   font-size: 0.82rem !important;
   color: #78716C !important;
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
