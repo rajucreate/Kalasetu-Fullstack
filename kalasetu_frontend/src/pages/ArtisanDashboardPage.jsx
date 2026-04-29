@@ -447,6 +447,8 @@ export function ArtisanDashboardPage() {
     reviews: renderReviews,
   };
   const safeActiveTab = tabContent[activeTab] ? activeTab : 'add';
+  const activeTabRenderer = tabContent[safeActiveTab] || renderAddProduct;
+  const activeTabPanel = activeTabRenderer() || renderAddProduct();
 
   return (
     <div className="artisan-dashboard">
@@ -499,7 +501,7 @@ export function ArtisanDashboardPage() {
 
       {/* ── Panel ── */}
       <div className="ad-content">
-        {tabContent[safeActiveTab]()}
+        {activeTabPanel}
       </div>
     </div>
   );
