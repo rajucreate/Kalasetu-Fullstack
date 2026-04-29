@@ -1,0 +1,85 @@
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled * {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .custom-cursor.is-visible {
+    opacity: 1;
+  }
+
+  .custom-cursor-layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    will-change: transform;
+    transform: translate3d(-100px, -100px, 0);
+  }
+
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    transform: translate(-50%, -50%);
+    transition: transform 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, width 0.22s ease, height 0.22s ease, border-radius 0.22s ease;
+  }
+
+  .custom-cursor-ring {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.6px solid rgba(249, 115, 22, 0.62);
+    background: rgba(251, 191, 36, 0.08);
+    box-shadow: 0 0 0 1px rgba(194, 65, 12, 0.2), 0 8px 18px rgba(13, 148, 136, 0.2);
+    backdrop-filter: blur(1px);
+  }
+
+  .custom-cursor-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fde68a 0%, #f97316 66%, #c2410c 100%);
+    box-shadow: 0 0 16px rgba(249, 115, 22, 0.45);
+  }
+
+  .custom-cursor.mode-interactive .custom-cursor-ring {
+    width: 34px;
+    height: 34px;
+    border-color: rgba(13, 148, 136, 0.82);
+    background: rgba(13, 148, 136, 0.1);
+    box-shadow: 0 0 0 1px rgba(13, 148, 136, 0.35), 0 10px 28px rgba(13, 148, 136, 0.35);
+  }
+
+  .custom-cursor.mode-interactive .custom-cursor-dot {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: radial-gradient(circle at 35% 35%, #d1fae5 0%, #0d9488 70%, #0f766e 100%);
+  }
+
+  .custom-cursor.mode-text .custom-cursor-ring {
+    width: 6px;
+    height: 30px;
+    border-radius: 8px;
+    border-color: rgba(194, 65, 12, 0.85);
+    background: rgba(251, 191, 36, 0.2);
+    box-shadow: 0 0 0 1px rgba(194, 65, 12, 0.2), 0 8px 16px rgba(194, 65, 12, 0.2);
+  }
+
+  .custom-cursor.mode-text .custom-cursor-dot {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  .custom-cursor.is-pressed .custom-cursor-ring {
+    transform: translate(-50%, -50%) scale(0.82);
+  }
+
+  .custom-cursor.is-pressed .custom-cursor-dot {
+    transform: translate(-50%, -50%) scale(1.35);
+  }
+}

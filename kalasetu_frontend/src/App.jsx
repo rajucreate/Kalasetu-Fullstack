@@ -17,11 +17,13 @@ import { ProtectedRoute } from './routes/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 import { GlobalErrorBanner } from './components/GlobalErrorBanner';
 import { GlobalToast } from './components/GlobalToast';
+import { CustomCursor } from './components/CustomCursor';
 import './App.css';
 
 function AppContent() {
   return (
     <div className="app">
+      <CustomCursor />
       <Header />
       <GlobalErrorBanner />
       <GlobalToast />
