@@ -2,7 +2,7 @@ import axios from 'axios';
 import { storage } from '../utils/storage';
 import { emitGlobalError, normalizeApiError } from '../services/errorService';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://kalasetu-01fa.onrender.com/api';
 
 // Create axios instance
 const client = axios.create({
