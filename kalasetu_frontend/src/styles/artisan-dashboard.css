@@ -177,6 +177,7 @@
    PANEL (shared card wrapper)
    ══════════════════════════════════════════════════════════ */
 .ad-panel {
+  display: block !important;
   background: #fff;
   border: 1.5px solid #F0E8D8;
   border-radius: 22px;
