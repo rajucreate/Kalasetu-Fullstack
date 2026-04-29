@@ -167,7 +167,8 @@
    CONTENT WRAPPER
    ══════════════════════════════════════════════════════════ */
 .ad-content {
-  animation: adFadeUp 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+  opacity: 1;
+  transform: none;
 }
 
 /* ══════════════════════════════════════════════════════════
