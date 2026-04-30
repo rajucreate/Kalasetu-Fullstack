@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kalasetu_frontend</title>
+    <!-- Inline fallback styles to keep critical dashboard panels visible
+         when built CSS assets fail to load in production. This is a small
+         defensive shim for debugging and should be removed once root cause
+         is addressed. -->
+    <style>
+      .ad-panel { display: block !important; background: #fff !important; border: 1px solid #e2e8f0 !important; padding: 1rem !important; border-radius: 12px !important; color: #111 !important; }
+      .ad-panel-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem !important; }
+      .ad-tabs { display:flex; gap:6px; margin-bottom:1rem !important; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
