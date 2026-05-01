@@ -112,7 +112,7 @@ export function MarketplacePage() {
                       )}
                       <div className="product-footer">
                         <span className="price">₹{product.price}</span>
-                        {product.is_approved && product.verification_status === 'VERIFIED' && (
+                        {product.verification_status === 'VERIFIED' && (
                           <span className="badge verified">Verified</span>
                         )}
                       </div>
